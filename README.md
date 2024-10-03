@@ -1,7 +1,7 @@
 
 # React Signature Pad
 
-A lightweight, customizable signature pad component for React, built with TypeScript. Capture user signatures, save them as images, clear the pad, and optionally download them in various formats. Perfect for e-signatures and drawing applications.
+A lightweight, customizable signature pad component for React, built with TypeScript. Capture user signatures, save them as images, clear the pad, and optionally download them in jpeg and png formats. Good for e-signatures applications.
 
 ## Screenshots
 ![alt text](assets/image-1.png)
