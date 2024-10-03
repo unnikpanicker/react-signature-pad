@@ -1,0 +1,17 @@
+canvas {
+    border: 1px solid #ccc;
+    cursor: crosshair;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
