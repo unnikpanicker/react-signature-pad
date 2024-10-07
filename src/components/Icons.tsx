@@ -10,7 +10,7 @@ const Icons: React.FC<IconType> = ({ iconType, fillColor = "black" }) => {
       return (
         <svg
           fill={fillColor}
-          role="icon-clear"
+          role="ic-clear"
           height="20"
           viewBox="0 0 20 20"
           width="20"
@@ -24,7 +24,7 @@ const Icons: React.FC<IconType> = ({ iconType, fillColor = "black" }) => {
       return (
         <svg
           fill={fillColor}
-          role="icon-copy"
+          role="ic-copy"
           viewBox="0 0 512 512"
           height="20"
           width="20"
@@ -38,7 +38,7 @@ const Icons: React.FC<IconType> = ({ iconType, fillColor = "black" }) => {
       return (
         <svg
           fill={fillColor}
-          role="icon-download"
+          role="ic-download"
           viewBox="0 0 96 96"
           height="20px"
           width="20px"
