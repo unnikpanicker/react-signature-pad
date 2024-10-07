@@ -10,7 +10,12 @@ const App: React.FC = () => {
   return (
     <div style={{ padding: "20px" }}>
       <h1>Signature Pad Demo</h1>
-      <SignaturePad width={600} height={400} onCopy={handleSave} />
+      <SignaturePad
+        width={600}
+        height={400}
+        onCopy={handleSave}
+        padStyles={{ width: "100px" }}
+      />
     </div>
   );
 };
