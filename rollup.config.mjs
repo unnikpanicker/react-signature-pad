@@ -1,19 +1,21 @@
-import typescript from 'rollup-plugin-typescript2';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+import typescript from "rollup-plugin-typescript2";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import resolve from "@rollup/plugin-node-resolve";
+import { terser } from "rollup-plugin-terser";
+import commonjs from "@rollup/plugin-commonjs";
+import tslib from "tslib";
 
 export default {
-  input: 'src/index.ts',
+  input: "src/index.ts",
   output: [
     {
       file: "dist/index.cjs.js",
-      format: 'cjs',
+      format: "cjs",
       sourcemap: true,
     },
     {
       file: "dist/index.esm.js",
-      format: 'es',
+      format: "es",
       sourcemap: true,
     },
   ],
@@ -21,7 +23,12 @@ export default {
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({ useTsconfigDeclarationDir: true }),
+    typescript({
+      useTsconfigDeclarationDir: true,
+      cache: false,
+      tslib: tslib,
+    }),
+    terser(),
   ],
-  external: ['react', 'react-dom'],
+  external: ["react", "react-dom"],
 };
