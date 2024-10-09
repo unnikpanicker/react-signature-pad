@@ -131,6 +131,37 @@ const useSignaturePad = (
     }
   };
 
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const imgSrc = event.target?.result as string;
+        if (imgSrc) {
+          SetIsClear(false)
+          drawImageOnCanvas(imgSrc);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const drawImageOnCanvas = (imageSrc: string) => {
+    const canvas = canvasRef.current;
+    if (canvas) {
+      clearCanvas();
+      const ctx = canvas.getContext("2d");
+      const img = new Image();
+      img.src = imageSrc;
+
+      img.onload = () => {
+        ctx?.drawImage(img, 0, 0);
+      };
+    }
+  };
+
   return {
     canvasRef,
     penColor,
@@ -138,6 +169,7 @@ const useSignaturePad = (
     clearCanvas,
     draw,
     handleCopy,
+    handleDrop,
     handleDownload,
     startDrawing,
     stopDrawing,
