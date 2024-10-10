@@ -7,7 +7,7 @@ import { THEME } from "../utils/theme";
 const SignaturePad: React.FC<SignaturePadProps> = ({
   width = 300,
   height = 150,
-  onCopy,
+  onSave,
   onDownload,
   onClear,
   theme = "light",
@@ -22,7 +22,7 @@ const SignaturePad: React.FC<SignaturePadProps> = ({
     isClear,
     clearCanvas,
     draw,
-    handleCopy,
+    handleSave,
     handleDrop,
     handleDownload,
     startDrawing,
@@ -33,7 +33,7 @@ const SignaturePad: React.FC<SignaturePadProps> = ({
     theme,
     downloadFilename,
     downloadFormat,
-    onCopy,
+    onSave,
     onDownload,
     onClear
   );
@@ -95,12 +95,12 @@ const SignaturePad: React.FC<SignaturePadProps> = ({
         }}
       >
         <div
-          onClick={handleCopy}
+          onClick={handleSave}
           style={{ marginRight: "10px", cursor: !isClear ? "pointer" : "auto" }}
         >
           <Icons
-            iconType="copy"
-            fillColor={isClear ? "#BFBFBF" : iconColor.copy}
+            iconType="save"
+            fillColor={isClear ? "#BFBFBF" : iconColor.save}
           />
         </div>
         {download && (

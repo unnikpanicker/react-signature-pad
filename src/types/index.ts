@@ -1,6 +1,6 @@
 export interface IconColor {
   clear?: string;
-  copy?: string;
+  save?: string;
   download?: string;
 }
 
@@ -8,7 +8,7 @@ export interface SignaturePadProps {
   width?: number;
   height?: number;
   theme?: "light" | "dark";
-  onCopy?: (dataURL: string) => void;
+  onSave?: (dataURL: string) => void;
   onDownload?: (dataURL: string) => void;
   onClear?: () => void;
   download?: boolean;
