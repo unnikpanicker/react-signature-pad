@@ -140,7 +140,6 @@ const useSignaturePad = (
       reader.onload = (event) => {
         const imgSrc = event.target?.result as string;
         if (imgSrc) {
-          SetIsClear(false)
           drawImageOnCanvas(imgSrc);
         }
       };
@@ -158,6 +157,7 @@ const useSignaturePad = (
 
       img.onload = () => {
         ctx?.drawImage(img, 0, 0);
+        SetIsClear(false);
       };
     }
   };
