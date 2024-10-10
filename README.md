@@ -19,7 +19,7 @@ A lightweight, customizable signature pad component for React, built with TypeSc
 Install the package using npm or yarn:
 
 ```bash
-pnpm install react-signature-pad
+pnpm install signature-pad-package
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ Import the component into your React project and use it as follows:
 
 ```tsx
 import React, { useState } from 'react';
-import SignaturePad from 'react-signature-pad';
+import SignaturePad from 'signature-pad-package';
 
 const App: React.FC = () => {
   const [signature, setSignature] = useState<string | null>(null);
@@ -67,7 +67,7 @@ export default App;
 
 ```tsx
 import React, { useState } from 'react';
-import SignaturePad from 'react-signature-pad';
+import SignaturePad from 'signature-pad-package';
 
 const App: React.FC = () => {
   const [signature, setSignature] = useState<string | null>(null);
