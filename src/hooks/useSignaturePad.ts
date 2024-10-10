@@ -7,7 +7,7 @@ const useSignaturePad = (
   theme: "light" | "dark" = "light",
   downloadFilename: string = "signature",
   downloadFormat: "image/png" | "image/jpeg" = "image/png",
-  onCopy?: (dataURL: string) => void,
+  onSave?: (dataURL: string) => void,
   onDownload?: (dataURL: string) => void,
   onClear?: () => void
 ) => {
@@ -107,10 +107,10 @@ const useSignaturePad = (
     return { offsetX, offsetY };
   };
 
-  const handleCopy = () => {
+  const handleSave = () => {
     if (canvasRef.current && !isClear) {
       const dataURL = canvasRef.current.toDataURL();
-      onCopy && onCopy(dataURL);
+      onSave && onSave(dataURL);
     }
   };
 
@@ -168,7 +168,7 @@ const useSignaturePad = (
     isClear,
     clearCanvas,
     draw,
-    handleCopy,
+    handleSave,
     handleDrop,
     handleDownload,
     startDrawing,

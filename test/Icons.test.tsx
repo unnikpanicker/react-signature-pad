@@ -15,16 +15,16 @@ test("renders clear icon with fill color", () => {
   expect(iconClear).toBeInTheDocument();
 });
 
-test("renders copy icon", () => {
-  const { getByRole } = render(<Icons iconType="copy" />);
-  const iconCopy = getByRole("ic-copy");
-  expect(iconCopy).toBeInTheDocument();
+test("renders save icon", () => {
+  const { getByRole } = render(<Icons iconType="save" />);
+  const iconSave = getByRole("ic-save");
+  expect(iconSave).toBeInTheDocument();
 });
 
-test("renders copy icon with fill color", () => {
-  const { getByRole } = render(<Icons iconType="copy" fillColor="red" />);
-  const iconCopy = getByRole("ic-copy");
-  expect(iconCopy).toBeInTheDocument();
+test("renders save icon with fill color", () => {
+  const { getByRole } = render(<Icons iconType="save" fillColor="red" />);
+  const iconSave = getByRole("ic-save");
+  expect(iconSave).toBeInTheDocument();
 });
 
 test("renders download icon", () => {

@@ -83,7 +83,7 @@ const App: React.FC = () => {
         width={400}
         height={200}
         theme={dark}
-        onCopy={handleSave} // Custom handler to save the signature
+        onSave={handleSave} // Custom handler to save the signature
         downloadFormat="image/jpeg" // Specify download format
         onDownload={() => console.log("Downloaded")} // Callback for download
         onClear={() => console.log("Cleared")} // Callback for clearing the canvas
@@ -94,7 +94,7 @@ const App: React.FC = () => {
         }} // Custom styling for the signature pad
         iconColor={{
           clear: "red",
-          copy: "green",
+          save: "green",
           download: "blue",
         }} // Custom icon colors for actions
       />
@@ -111,16 +111,15 @@ export default App;
 | ------------------- | ----------------- | --------------- | --------------------------------------------------------------------------- |
 | `width`             | `number`          | `500`           | Width of the canvas (in pixels).                                            |
 | `height`            | `number`          | `300`           | Height of the canvas (in pixels).                                           |
-| `theme`          | `'dark'` \| `'light'`           | `'light'`       | Theme for the signature pad.                                    |
-| `onSave`            | `function(dataURL: string)` | Required | Callback that receives the base64-encoded image data (signature).            |
-| `onCopy`            | `function(dataURL: string)` | `undefined`    | Callback that fires when the signature is copied (similar to `onSave`).     |
+| `theme`          | `'dark'` \| `'light'`           | `'light'`       | Theme for the signature pad.                                    |           |
+| `onSave`            | `function(dataURL: string)` | `undefined`    | Callback that fires when the signature is copied (similar to `onSave`).     |
 | `onDownload`        | `function()`      | `undefined`     | Callback that triggers when the signature is downloaded.                    |
 | `onClear`           | `function()`      | `undefined`     | Callback that triggers when the signature pad is cleared.                   |
 | `download`          | `boolean`         | `false`         | Enables a download button to download the signature image.                  |
 | `downloadFilename`  | `string`          | `'signature'`   | Default filename when downloading the signature.                            |
 | `downloadFormat`    | `'image/png' \| 'image/jpeg'` | `'image/png'` | Format of the downloaded image (PNG or JPEG).                               |
 | `padStyles` | `object`          | `undefined`     | Custom styles for the signature pad (e.g., border, border radius).          |
-| `iconColor`         | `object`          | `undefined`     | Customize the colors of the action icons (`clear`, `copy`, `download`).     |
+| `iconColor`         | `object`          | `undefined`     | Customize the colors of the action icons (`clear`, `save`, `download`).     |
 
 ## Development
 

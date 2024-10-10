@@ -13,7 +13,7 @@ const App: React.FC = () => {
       <SignaturePad
         width={600}
         height={400}
-        onCopy={handleSave}
+        onSave={handleSave}
         padStyles={{ width: "100px" }}
       />
     </div>
