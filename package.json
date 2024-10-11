@@ -1,11 +1,15 @@
 {
   "name": "signature-pad-package",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "type": "module",
   "types": "dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unnikpanicker/react-signature-pad.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "rollup -c",
